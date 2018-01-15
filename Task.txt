@@ -35,6 +35,14 @@ Due Date:
 
 
 Link used to learn and research:
+********************************
+1.	Websites RNN and NLP
+	*	http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/
+	*	https://machinelearningmastery.com/encoder-decoder-recurrent-neural-network-models-neural-machine-translation/ 
+2.	Similar Projects
+	*	https://github.com/erilyth/DeepLearning-Challenges/tree/master/Language_Translation
+	
+
 videos
 https://www.youtube.com/watch?v=XvOKXJxDn1U
 https://machinelearningmastery.com/encoder-decoder-recurrent-neural-network-models-neural-machine-translation/
