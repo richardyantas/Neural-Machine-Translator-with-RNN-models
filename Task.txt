@@ -1,0 +1,76 @@
+Project:
+
+
+https://github.com/tensorflow/nmt
+
+	*	Propose improvements in the arquitecture
+	*	To use benchmarks datasets
+	*	Propose and use suitable metrics of performance measures
+
+Format:	
+	http://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines
+
+General Observations
+
+
+	*	Can be used tensorflow
+	*	It must be written in English Latex
+		Title
+		Abstract
+		Introduction
+		Main Concepts
+		Proposal
+		Experimental Results
+		Related Works
+		Conclusion
+		References
+
+Due Date:
+	Results Presentation: 18 January
+	Sent of link in overleaf: 24 January
+
+
+	https://www.overleaf.com/latex/templates/tagged/conference-paper#.WlwCo_ZOnQo
+
+
+
+Link used to learn and research:
+videos
+https://www.youtube.com/watch?v=XvOKXJxDn1U
+https://machinelearningmastery.com/encoder-decoder-recurrent-neural-network-models-neural-machine-translation/
+
+https://google.github.io/seq2seq/nmt/
+
+
+
+Summary:
+
+Encoder-Decoder Recurrent Neural Network Models for Neural Machine Translation
+https://machinelearningmastery.com/encoder-decoder-recurrent-neural-network-models-neural-machine-translation/
+
+	*	Encoder-Decoder Architecture for NMT:
+		he encoder-decoder recurrent neural network architecture is the core technology inside Google’s translate service.
+
+		The Encoder-Decoder architecture with recurrent neural networks has become an effective and standard approach for both neural machine translation (NMT) and sequence-to-sequence (seq2seq) prediction in general.
+		
+		
+
+	*	he so-called “Sutskever model” for direct end-to-end machine translation.
+
+	*	The so-called “Cho model” that extends the architecture with GRU units and an attention mechanism.
+
+
+Sequence to sequence (seq2seq)
+https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html
+
+[Keras] is a library
+https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html
+https://github.com/keras-team/keras/blob/master/examples/addition_rnn.py
+
+[OpenNMT]
+http://forum.opennmt.net/t/training-romance-multi-way-model/86/18
+
+Richard:
+(Not used) http://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines
+https://www.ieee.org/conferences_events/conferences/publishing/templates.html
+https://www.overleaf.com/13202788ckspvczhhfkb#/50784759/
