@@ -10,317 +10,141 @@ decoders in standard MT.
 \section{Neural Machine Translations}
 NMT is an approach to machine translation that uses a large neural network. It departs from phrases-based statistical approaches that use separately engineerd subcomponents.Neural machine translation (NMT) is not a drastic step beyond what has been traditionally done in statistical machine translation (SMT). MNT starts emitting one target word a time  as illustrated in. NMT is often a large neural network that is trained in an end-to-end fashion and has the abil-ity to generalize well to very long word sequences.
 
+\subsection{Encoder and decoder arquitecture}
+
+A  neural  machine  translation  system  is  a  neural
+network that directly models the conditional prob-ability $p(y|x)$ of translating a source sentence,$x_{1}$,...,$x_{n}$  to a target sentence $y_{1}$,...,$y_{n}$ A basic form of NMT consists of two components: $(a)$ an which computes a representations for each source sentence and $(b)$ a decoder which generates one target word at a time and hence decomposes the conditional
+probability as:
+
 % Introduce a new line
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.25]{nmt}
-  \caption{Encoder-decoder architecture}   
-  \label{fig:picture}
-\end{figure}
+\begin{gather*}
+  \log p(y|x) = \sum_{j=1}^{m}log p(y_{j}|y<j,s)
+\end{gather*}
 
-In this tutorial, we consider as examples a deep multi-layer RNN which is unidirectional and uses LSTM as a recurrent unit. We show an example of such a model in Figure 2. In this example, we build a model to translate a source sentence "I am a student" into a target sentence "Je suis étudiant". At a high level, the NMT model consists of two recurrent neural networks: the encoder RNN simply consumes the input source words without making any prediction; the decoder, on the other hand, processes the target sentence while predicting the next words.
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{nmt} \\% Example image
+    Figura 1. Encoder-decoder architecture
+\end{center}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.25]{seq2seq}
-  \caption{ Neural machine translation }   
-  \label{fig:picture}
-\end{figure}
+\subsection{Long short term memory}
+We consider as examples a deep multi-layer RNN which is unidirectional and uses LSTM as a recurrent unit. We show an example of such a model in Figure 2. In this example, we build a model to translate a source sentence "I am a student" into a target sentence "Je suis étudiant". At a high level, the NMT model consists of two recurrent neural networks: the encoder RNN simply consumes the input source words without making any prediction; the decoder, on the other hand, processes the target sentence while predicting the next words.
 
 
+\begin{gather*}
+  f_{t} = \sigma(W_{f}[h_{t-1},x_{t}]+b_{f}) \\
+  i_{t} = \sigma(W_{i}[h_{t-1},x_{t}]+b_{i}) \\
+  C_{t} = tanh(W_{c}[h_{t-1},x_{t}]+b_{c})   \\
+\end{gather*}
 
+
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{lstm} \\% Example image
+    Figura 2. Long short-term memory
+\end{center}
 
 \section{Attention based models}
 
+Our various  attention-based  models  are classifed
+into two broad categories, global and local
+. These classes differ in terms of whether the attention
+is placed on all source positions or on only a few
+source  positions.
+
+Common to these two types of models is the fact
+that at each time step $t$ in the decoding phase, both
+approaches first take as input the hidden state $h_{t}$
+at the top layer of a stacking LSTM. The goal is
+then to derive a context vector $c_{t}$ that captures rel-evant source-side  information  to help predict  the current target word
+$y_{t}$. While these models differ in how the context vector $c_{t}$
+is derived, they share the same subsequent steps.
+
+Specifically, given the target hidden state $h_{t}$
+and the  source-side  context  vector $c_{t}$
+,  we  employ  a simple concatenation  layer to combine the infor-mation 
+from both vectors to produce an attentional hidden state as follows:
+
+\begin{gather*}
+  \widetilde{h_{t}} = tanh(W_{c}[c_{t},h_{t}])
+\end{gather*}
+
+The attentional vector $h_{t}$ is then fed through the
+softmax  layer  to  produce  the  predictive  distribu-
+tion formulated as:
+
+\begin{gather*}
+  p(y_{t}|y_{<t},x) = softmax(W_{s}\widetilde{h_{t}})
+\end{gather*}
+
 \subsection{Global attention}
+The idea of a global attentional  model is to con-
+sider all the hidden states of the encoder when de-
+riving  the  context  vector $c_{t}$. In this  model  type,
+a variable-length alignment vector $a_{t}$, whose size
+equals the number of time steps on the source side,
+is derived by comparing the current target hidden state
+$h_{t}$ with each source hidden state $h_{s}$.
 
-We have already seen several typeface changes in this sample.  You can
-indicate italicized words or phrases in your text with the command
-\texttt{{\char'134}textit}; emboldening with the command
-\texttt{{\char'134}textbf} and typewriter-style (for instance, for
-computer code) with \texttt{{\char'134}texttt}.  But remember, you do
-not have to indicate typestyle changes when such changes are part of
-the \textit{structural} elements of your article; for instance, the
-heading of this subsection will be in a sans serif\footnote{Another
-  footnote here.  Let's make this a rather long one to see how it
-  looks.} typeface, but that is handled by the document class file.
-Take care with the use of\footnote{Another footnote.}  the
-curly braces in typeface changes; they mark the beginning and end of
-the text that is to be in the different typeface.
+\begin{gather*}
+  a_{t}(s) = align(h_{t},\bar{h_{s}})\\
+           = \frac{ exp(score(h_{t},\bar{h_{s}})) }{ \sum_{s_{p}}exp(score(h_{t},h_{s})) }
+\end{gather*}
 
-You can use whatever symbols, accented characters, or non-English
-characters you need anywhere in your document; you can find a complete
-list of what is available in the \textit{\LaTeX\ User's Guide}
-\cite{Lamport:LaTeX}.
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{global} \\% Example image
+    Figura 3. Global attentional model - at each time step t, the models infers a variable-length
+    alignment weigth vector $a_{t}$ based on the current target state $h_{t}$ and all source states
+    $\bar{h_{s}}$. A global context vector $c_{t}$ is then computed as the weighted average, according to $a_{t}$, over all the source states.
+\end{center}
 
+Here, score is referred as a \textit{content-based} function for which we consider three different alternatives:
+
+\begin{gather*}
+    score(h_{t},\bar{h_{s}}) =  \bar{h_{t}}^T \bar{h_{s}}       \\
+    score(h_{t},\bar{h_{s}}) =  \bar{h_{t}}^T W_{a}\bar{h_{s}}   \\ 
+    score(h_{t},\bar{h_{s}}) = \bar{v_{t}}^T Tanh( W_{a}[h_{t}:\bar{h_{s}}] )  \\
+\end{gather*}
+
+Besides alignment vector as weigths, the context vector $c_{t}$ is computed as the weight average over all the source
+hidden states.
+
+
+% \bar{q} 
 
 \subsection{Local attention}
-You may want to display math equations in three distinct styles:
-inline, numbered or non-numbered display.  Each of
-the three are discussed in the next sections.
+The global attention has a drawback that it has to
+attend to all words on the source side for each tar-get word, which is expensive and can potentially
+render it impractical to translate longer sequences, e.g.,  paragraphs  or  documents.   To  address  this
+deficiency,  we propose  a local attentional  mech-anism that chooses to focus only on a small subset
+of the source positions per target word. \\
+
+This model takes inspiration from the tradeoff between the soft and hard attentional models proposed
+by Xu et al.(2015) to tackle the image caption generation task. In their work, soft attention refers
+to the global attention approach in which weights are placed "softly" over all patches in the source
+image. The hard attention, on the order hand, selects on patch of the image to attend to a time.
 
 
 
-\subsubsection{Input-feeding Approach}
-A formula that appears in the running text is called an
-inline or in-text formula.  It is produced by the
-\textbf{math} environment, which can be
-invoked with the usual \texttt{{\char'134}begin\,\ldots{\char'134}end}
-construction or with the short form \texttt{\$\,\ldots\$}. You
-can use any of the symbols and structures,
-from $\alpha$ to $\omega$, available in
-\LaTeX~\cite{Lamport:LaTeX}; this section will simply show a
-few examples of in-text equations in context. Notice how
-this equation:
-\begin{math}
-  \lim_{n\rightarrow \infty}x=0
-\end{math},
-set here in in-line math style, looks slightly different when
-set in display style.  (See next section).
+\subsection{Input-feeding Approach}
 
-\subsubsection{Display Equations}
-A numbered display equation---one set off by vertical space from the
-text and centered horizontally---is produced by the \textbf{equation}
-environment. An unnumbered display equation is produced by the
-\textbf{displaymath} environment.
-
-Again, in either environment, you can use any of the symbols
-and structures available in \LaTeX\@; this section will just
-give a couple of examples of display equations in context.
-First, consider the equation, shown as an inline equation above:
-\begin{equation}
-  \lim_{n\rightarrow \infty}x=0
-\end{equation}
-Notice how it is formatted somewhat differently in
-the \textbf{displaymath}
-environment.  Now, we'll enter an unnumbered equation:
-\begin{displaymath}
-  \sum_{i=0}^{\infty} x + 1
-\end{displaymath}
-and follow it with another numbered equation:
-\begin{equation}
-  \sum_{i=0}^{\infty}x_i=\int_{0}^{\pi+2} f
-\end{equation}
-just to demonstrate \LaTeX's able handling of numbering.
-
-\subsection{Input-feeding approach}
-Citations to articles~\cite{bowman:reasoning,
-clark:pct, braams:babel, herlihy:methodology},
-conference proceedings~\cite{clark:pct} or maybe
-books \cite{Lamport:LaTeX, salas:calculus} listed
-in the Bibliography section of your
-article will occur throughout the text of your article.
-You should use BibTeX to automatically produce this bibliography;
-you simply need to insert one of several citation commands with
-a key of the item cited in the proper location in
-the \texttt{.tex} file~\cite{Lamport:LaTeX}.
-The key is a short reference you invent to uniquely
-identify each work; in this sample document, the key is
-the first author's surname and a
-word from the title.  This identifying key is included
-with each item in the \texttt{.bib} file for your article.
-
-The details of the construction of the \texttt{.bib} file
-are beyond the scope of this sample document, but more
-information can be found in the \textit{Author's Guide},
-and exhaustive details in the \textit{\LaTeX\ User's
-Guide} by Lamport~\shortcite{Lamport:LaTeX}.
-
-This article shows only the plainest form
-of the citation command, using \texttt{{\char'134}cite}.
-
-Some examples.  A paginated journal article \cite{Abril07}, an enumerated
-journal article \cite{Cohen07}, a reference to an entire issue \cite{JCohen96},
-a monograph (whole book) \cite{Kosiur01}, a monograph/whole book in a series (see 2a in spec. document)
-\cite{Harel79}, a divisible-book such as an anthology or compilation \cite{Editor00}
-followed by the same example, however we only output the series if the volume number is given
-\cite{Editor00a} (so Editor00a's series should NOT be present since it has no vol. no.),
-a chapter in a divisible book \cite{Spector90}, a chapter in a divisible book
-in a series \cite{Douglass98}, a multi-volume work as book \cite{Knuth97},
-an article in a proceedings (of a conference, symposium, workshop for example)
-(paginated proceedings article) \cite{Andler79}, a proceedings article
-with all possible elements \cite{Smith10}, an example of an enumerated
-proceedings article \cite{VanGundy07},
-an informally published work \cite{Harel78}, a doctoral dissertation \cite{Clarkson85},
-a master's thesis: \cite{anisi03}, an online document / world wide web
-resource \cite{Thornburg01, Ablamowicz07, Poker06}, a video game (Case 1) \cite{Obama08} and (Case 2) \cite{Novak03}
-and \cite{Lee05} and (Case 3) a patent \cite{JoeScientist001},
-work accepted for publication \cite{rous08}, 'YYYYb'-test for prolific author
-\cite{SaeediMEJ10} and \cite{SaeediJETC10}. Other cites might contain
-'duplicate' DOI and URLs (some SIAM articles) \cite{Kirschmer:2010:AEI:1958016.1958018}.
-Boris / Barbara Beeton: multi-volume works as books
-\cite{MR781536} and \cite{MR781537}.
-
-A couple of citations with DOIs: \cite{2004:ITE:1009386.1010128,
-  Kirschmer:2010:AEI:1958016.1958018}. 
-
-Online citations: \cite{TUGInstmem, Thornburg01, CTANacmart}.  
-
-
-\subsection{bal bla}
-Because tables cannot be split across pages, the best
-placement for them is typically the top of the page
-nearest their initial cite.  To
-ensure this proper ``floating'' placement of tables, use the
-environment \textbf{table} to enclose the table's contents and
-the table caption.  The contents of the table itself must go
-in the \textbf{tabular} environment, to
-be aligned properly in rows and columns, with the desired
-horizontal and vertical rules.  Again, detailed instructions
-on \textbf{tabular} material
-are found in the \textit{\LaTeX\ User's Guide}.
-
-Immediately following this sentence is the point at which
-Table~\ref{tab:freq} is included in the input file; compare the
-placement of the table here with the table in the printed
-output of this document.
-
-\begin{table}
-  \caption{Frequency of Special Characters}
-  \label{tab:freq}
-  \begin{tabular}{ccl}
-    \toprule
-    Non-English or Math&Frequency&Comments\\
-    \midrule
-    \O & 1 in 1,000& For Swedish names\\
-    $\pi$ & 1 in 5& Common in math\\
-    \$ & 4 in 5 & Used in business\\
-    $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
-  \bottomrule
-\end{tabular}
-\end{table}
-
-To set a wider table, which takes up the whole width of the page's
-live area, use the environment \textbf{table*} to enclose the table's
-contents and the table caption.  As with a single-column table, this
-wide table will ``float'' to a location deemed more desirable.
-Immediately following this sentence is the point at which
-Table~\ref{tab:commands} is included in the input file; again, it is
-instructive to compare the placement of the table here with the table
-in the printed output of this document.
-
-
-\begin{table*}
-  \caption{Some Typical Commands}
-  \label{tab:commands}
-  \begin{tabular}{ccl}
-    \toprule
-    Command &A Number & Comments\\
-    \midrule
-    \texttt{{\char'134}author} & 100& Author \\
-    \texttt{{\char'134}table}& 300 & For tables\\
-    \texttt{{\char'134}table*}& 400& For wider tables\\
-    \bottomrule
-  \end{tabular}
-\end{table*}
-% end the environment with {table*}, NOTE not {table}!
-
-It is strongly recommended to use the package booktabs~\cite{Fear05}
-and follow its main principles of typography with respect to tables:
-\begin{enumerate}
-\item Never, ever use vertical rules.
-\item Never use double rules.
-\end{enumerate}
-It is also a good idea not to overuse horizontal rules.
+In  our  proposed  global  and  local  approaches,
+the attentional decisions are made independently,
+which  is suboptimal.   Whereas,  in  standard  MT,
+a coverage set  is  often  maintained  during  the
+translation process to keep track of which source
+words  have  been  translated.   Likewise,  in  atten-
+tional NMTs, alignment decisions should be made
+jointly  taking  into  account  past  alignment  infor-
+mation.    To  address  that,  we  propose  an
+input-feeding approach  in which attentional  vectors
+$\bar{h_{t}}$ are concatenated with inputs at the next time
+The  effects  of  hav-ing  such  connections  are  two-fold:  (a)  we  hope
+to make the model fully aware of previous align-ment choices  and (b) we create a very deep net-
+work spanning both horizontally and vertically.
 
 
 \subsection{Figures}
 
-Like tables, figures cannot be split across pages; the best placement
-for them is typically the top or the bottom of the page nearest their
-initial cite.  To ensure this proper ``floating'' placement of
-figures, use the environment \textbf{figure} to enclose the figure and
-its caption.
-
-This sample document contains examples of \texttt{.eps} files to be
-displayable with \LaTeX.  If you work with pdf\LaTeX, use files in the
-\texttt{.pdf} format.  Note that most modern \TeX\ systems will convert
-\texttt{.eps} to \texttt{.pdf} for you on the fly.  More details on
-each of these are found in the \textit{Author's Guide}.
-
-\begin{figure}
-\includegraphics{pdf/fly}
-\caption{A sample black and white graphic.}
-\end{figure}
-
-\begin{figure}
-\includegraphics[height=1in, width=1in]{pdf/fly}
-\caption{A sample black and white graphic
-that has been resized with the \texttt{includegraphics} command.}
-\end{figure}
-
-
-As was the case with tables, you may want a figure that spans two
-columns.  To do this, and still to ensure proper ``floating''
-placement of tables, use the environment \textbf{figure*} to enclose
-the figure and its caption.  And don't forget to end the environment
-with \textbf{figure*}, not \textbf{figure}!
-
-\begin{figure*}
-\includegraphics{pdf/flies}
-\caption{A sample black and white graphic
-that needs to span two columns of text.}
-\end{figure*}
-
-
-\begin{figure}
-\includegraphics[height=1in, width=1in]{pdf/rosette}
-\caption{A sample black and white graphic that has
-been resized with the \texttt{includegraphics} command.}
-\end{figure}
-
-\subsection{Theorem-like Constructs}
-
-Other common constructs that may occur in your article are the forms
-for logical constructs like theorems, axioms, corollaries and proofs.
-ACM uses two types of these constructs:  theorem-like and
-definition-like.
-
-Here is a theorem:
-\begin{theorem}
-  Let $f$ be continuous on $[a,b]$.  If $G$ is
-  an antiderivative for $f$ on $[a,b]$, then
-  \begin{displaymath}
-    \int^b_af(t)\,dt = G(b) - G(a).
-  \end{displaymath}
-\end{theorem}
-
-Here is a definition:
-\begin{definition}
-  If $z$ is irrational, then by $e^z$ we mean the
-  unique number that has
-  logarithm $z$:
-  \begin{displaymath}
-    \log e^z = z.
-  \end{displaymath}
-\end{definition}
-
-The pre-defined theorem-like constructs are \textbf{theorem},
-\textbf{conjecture}, \textbf{proposition}, \textbf{lemma} and
-\textbf{corollary}.  The pre-defined de\-fi\-ni\-ti\-on-like constructs are
-\textbf{example} and \textbf{definition}.  You can add your own
-constructs using the \textsl{amsthm} interface~\cite{Amsthm15}.  The
-styles used in the \verb|\theoremstyle| command are \textbf{acmplain}
-and \textbf{acmdefinition}.
-
-Another construct is \textbf{proof}, for example,
-
-\begin{proof}
-  Suppose on the contrary there exists a real number $L$ such that
-  \begin{displaymath}
-    \lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} = L.
-  \end{displaymath}
-  Then
-  \begin{displaymath}
-    l=\lim_{x\rightarrow c} f(x)
-    = \lim_{x\rightarrow c}
-    \left[ g{x} \cdot \frac{f(x)}{g(x)} \right ]
-    = \lim_{x\rightarrow c} g(x) \cdot \lim_{x\rightarrow c}
-    \frac{f(x)}{g(x)} = 0\cdot L = 0,
-  \end{displaymath}
-  which contradicts our assumption that $l\neq 0$.
-\end{proof}
 
 \section{Experiments}
 dsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsds

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.3)  25 JAN 2018 21:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.3)  27 JAN 2018 02:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -714,17 +714,14 @@ Package: wrapfig 2003/01/31  v 3.6
 \c@theorem=\count134
 
 Excluding comment 'screenonly' Include comment 'printonly'
-Include comment 'anonsuppress' (./sample-sigconf.aux
-
-LaTeX Warning: Label `fig:picture' multiply defined.
-
-)
+Include comment 'anonsuppress' (./sample-sigconf.aux)
 \openout1 = `sample-sigconf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 45.
 LaTeX Font Info:    Try loading font information for OML+nxlmi on input line 45
 .
- (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlnxlmi.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
 LaTeX Font Info:    ... okay on input line 45.
@@ -917,16 +914,16 @@ Package caption Info: End \AtBeginDocument code.
 
 Excluding 'CCSXML' comment.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 131.
+(Font)              scaled to size 17.28pt on input line 132.
 LaTeX Font Info:    Try loading font information for T1+LinuxBiolinumT-TLF on i
-nput line 131.
+nput line 132.
 
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 File: T1LinuxBiolinumT-TLF.fd 2012/11/26 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 131.
+(Font)              scaled to size 17.28pt on input line 132.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -934,19 +931,19 @@ Package microtype Info: Loading generic settings for font family
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/bx/n' in size <17.28> not
  available
 (Font)              Font shape `T1/LinuxBiolinumT-TLF/b/n' tried instead on inp
-ut line 131.
+ut line 132.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 131.
+(Font)              scaled to size 17.28pt on input line 132.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 131.
+(Font)              scaled to size 17.28pt on input line 132.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.5pt on input line 131.
+(Font)              scaled to size 12.5pt on input line 132.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.4pt on input line 131.
+(Font)              scaled to size 9.4pt on input line 132.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -955,7 +952,7 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Try loading font information for TS1+LinuxBiolinumT-TLF on 
-input line 131.
+input line 132.
 
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/TS1LinuxBiolinumT-TLF.fd
 File: TS1LinuxBiolinumT-TLF.fd 2012/11/26 (autoinst) Font definitions for TS1/L
@@ -964,9 +961,9 @@ inuxBiolinumT-TLF.
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/bx/n' in size <12.5> not
  available
 (Font)              Font shape `TS1/LinuxBiolinumT-TLF/b/n' tried instead on in
-put line 131.
+put line 132.
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 12.5pt on input line 131.
+(Font)              scaled to size 12.5pt on input line 132.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
@@ -974,49 +971,49 @@ Package microtype Info: Loading generic settings for font family
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/bx/n' in size <9> not ava
 ilable
 (Font)              Font shape `T1/LinuxBiolinumT-TLF/b/n' tried instead on inp
-ut line 131.
+ut line 132.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 131.
+(Font)              scaled to size 9.0pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/bx/n' in size <12> not av
 ailable
 (Font)              Font shape `T1/LinuxBiolinumT-TLF/b/n' tried instead on inp
-ut line 131.
+ut line 132.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 131.
+(Font)              scaled to size 12.0pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 131.
+(Font)              scaled to size 12.0pt on input line 132.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 131.
+(Font)              scaled to size 12.0pt on input line 132.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 131.
+(Font)              scaled to size 8.8pt on input line 132.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.6pt on input line 131.
+(Font)              scaled to size 6.6pt on input line 132.
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 131.
+(Font)              scaled to size 8.8pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 131.
+(Font)              scaled to size 12.0pt on input line 132.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 131.
+ input line 132.
 
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
 File: TS1LinuxLibertineT-TLF.fd 2012/11/26 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 131.
+(Font)              scaled to size 8.8pt on input line 132.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 131.
+(Font)              scaled to size 10.0pt on input line 132.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 131.
+(Font)              scaled to size 10.0pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 131.
+(Font)              scaled to size 5.5pt on input line 132.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 131.
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 131.
+(Font)              scaled to size 5.5pt on input line 132.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 132.
 
 (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
@@ -1032,116 +1029,84 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 131.
+(Font)              scaled to size 7.0pt on input line 132.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 131.
+(Font)              scaled to size 7.0pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 131.
+(Font)              scaled to size 9.0pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 131.
+(Font)              scaled to size 10.95pt on input line 132.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 131.
+(Font)              scaled to size 9.0pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 131.
+(Font)              scaled to size 9.0pt on input line 132.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 131.
+(Font)              scaled to size 9.0pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 131.
+(Font)              scaled to size 7.3pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 131.
+(Font)              scaled to size 8.0pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 131.
+(Font)              scaled to size 8.0pt on input line 132.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 131.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 131.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 131.
+(Font)              scaled to size 8.0pt on input line 132.
 
-(./samplebody-conf.tex <img/nmt.png, id=99, 918.43124pt x 130.4875pt>
+
+LaTeX Warning: Reference `TotPages' on page 1 undefined on input line 132.
+
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 132.
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 6.2pt on input line 132.
+(./samplebody-conf.tex <img/nmt.png, id=10, 918.43124pt x 130.4875pt>
 File: img/nmt.png Graphic file (type png)
 
 <use img/nmt.png>
-Package pdftex.def Info: img/nmt.png used on input line 17.
-(pdftex.def)             Requested size: 229.60724pt x 32.62178pt.
- <img/seq2seq.png, id=100, 793.96625pt x 653.44125pt>
-File: img/seq2seq.png Graphic file (type png)
+Package pdftex.def Info: img/nmt.png used on input line 26.
+(pdftex.def)             Requested size: 168.8025pt x 23.9825pt.
+ <img/lstm.png, id=11, 371.9496pt x 201.1515pt>
+File: img/lstm.png Graphic file (type png)
 
-<use img/seq2seq.png>
-Package pdftex.def Info: img/seq2seq.png used on input line 26.
-(pdftex.def)             Requested size: 198.49107pt x 163.35991pt.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `T1/zi4/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `T1/zi4/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
+<use img/lstm.png>
+Package pdftex.def Info: img/lstm.png used on input line 42.
+(pdftex.def)             Requested size: 168.8025pt x 91.2908pt.
+
+Underfull \vbox (badness 8170) has occurred while \output is active []
+
  [1.1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
- <./img/nmt.png> <./img/seq2seq.png>]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.3pt on input line 54.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 66.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 66.
- [2.2]
-<pdf/fly.pdf, id=225, 34.1275pt x 32.12pt>
-File: pdf/fly.pdf Graphic file (type pdf)
- <use pdf/fly.pdf>
-Package pdftex.def Info: pdf/fly.pdf used on input line 243.
-(pdftex.def)             Requested size: 34.1274pt x 32.1199pt.
-File: pdf/fly.pdf Graphic file (type pdf)
- <use pdf/fly.pdf>
-Package pdftex.def Info: pdf/fly.pdf used on input line 248.
-(pdftex.def)             Requested size: 72.27492pt x 72.27565pt.
-LaTeX Font Info:    Font shape `T1/zi4/bx/n' in size <9> not available
-(Font)              Font shape `T1/zi4/b/n' tried instead on input line 250.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `T1/zi4/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `T1/zi4/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-
-<pdf/flies.pdf, id=226, 307.1475pt x 114.4275pt>
-File: pdf/flies.pdf Graphic file (type pdf)
- <use pdf/flies.pdf>
-Package pdftex.def Info: pdf/flies.pdf used on input line 261.
-(pdftex.def)             Requested size: 307.14674pt x 114.42722pt.
-
-<pdf/rosette.pdf, id=227, 364.59212pt x 364.59212pt>
-File: pdf/rosette.pdf Graphic file (type pdf)
- <use pdf/rosette.pdf>
-Package pdftex.def Info: pdf/rosette.pdf used on input line 268.
-(pdftex.def)             Requested size: 72.26622pt x 72.26622pt.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 9.0pt on input line 282.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sl' in size <9> not av
-ailable
-(Font)              Font shape `T1/LinuxLibertineT-TLF/m/it' tried instead on i
-nput line 303.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 303.
-
-Overfull \hbox (11.73874pt too wide) in paragraph at lines 326--329
-\T1/LinuxLibertineT-TLF/m/n/9 (-20) dsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
-sdsdsdsdsdsdsdsdsdsds
- []
-
-
-Overfull \hbox (11.73874pt too wide) in paragraph at lines 374--377
-\T1/LinuxLibertineT-TLF/m/n/9 (-20) dsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
-sdsdsdsdsdsdsdsdsdsds
- []
-
-[3.3 <./pdf/fly.pdf>]) (./sample-sigconf.bbl
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 5.5pt on input line 225.
+ <./img/nmt.png>]
+<img/global.png, id=41, 320.19624pt x 279.0425pt>
+File: img/global.png Graphic file (type png)
+ <use img/global.png>
+Package pdftex.def Info: img/global.png used on input line 94.
+(pdftex.def)             Requested size: 168.8025pt x 147.10837pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4.4 <./pdf/flies.pdf> <./pdf/rosette.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--120
+
+ []
+
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 147.
+[2.2 <./img/lstm.png> <./img/global.png>]
+Overfull \hbox (11.73874pt too wide) in paragraph at lines 151--154
+\T1/LinuxLibertineT-TLF/m/n/9 (-20) dsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
+sdsdsdsdsdsdsdsdsdsds
+ []
+
+
+Overfull \hbox (11.73874pt too wide) in paragraph at lines 199--202
+\T1/LinuxLibertineT-TLF/m/n/9 (-20) dsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
+sdsdsdsdsdsdsdsdsdsds
+ []
+
+) (./sample-sigconf.bbl
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 5.5pt on input line 225.
+
 Underfull \hbox (badness 1337) in paragraph at lines 407--416
 []\T1/LinuxLibertineT-TLF/m/n/7 (+20) Barack Obama. 2008.  A more per-fect unio
 n.  Video. (5 March 2008).
@@ -1153,61 +1118,72 @@ Underfull \hbox (badness 2142) in paragraph at lines 407--416
 / video . google . com / videoplay ? docid =
  []
 
-) [5.5
+[3.3]) [4.4
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
- (./sample-sigconf.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
-Package rerunfilecheck Info: File `sample-sigconf.out' has not changed.
-(rerunfilecheck)             Checksum: 4706115871435CE80F6A2EA85D8EF208;3554.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
+ (./sample-sigconf.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 139.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 139.
 
 
-LaTeX Warning: There were multiply-defined labels.
+Package rerunfilecheck Warning: File `sample-sigconf.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `sample-sigconf.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  09B87F33C8B1445D86BB93D6DC4FCAB6;3685.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 18350 strings out of 493029
- 279334 string characters out of 6136235
- 385910 words of memory out of 5000000
- 20873 multiletter control sequences out of 15000+600000
- 236875 words of font info for 447 fonts, out of 8000000 for 9000
+ 18234 strings out of 493029
+ 277095 string characters out of 6136235
+ 388932 words of memory out of 5000000
+ 20817 multiletter control sequences out of 15000+600000
+ 214416 words of font info for 425 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,11n,94p,805b,613s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
-e/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{/usr/share/texlive/texm
-f-dist/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{/usr/share/texlive/texmf-dist/f
-onts/enc/dvips/newtx/libertinealt.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
-dvips/libertine/lbtn_c7kyj5.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
-libertine/lbtn_25tcsq.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libert
-ine/lbtn_7grukw.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lb
-tn_nh77jq.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_nao
-oyc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.en
-c}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_afusau.enc}{/us
-r/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_mmutss.enc}</usr/shar
-e/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumTI.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/newtx/fxlri-7letters.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/newtx/txex-bar.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfont
-s/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/newtx/zxlr.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on sample-sigconf.pdf (5 pages, 823134 bytes).
+ 60i,12n,94p,805b,666s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_c7kyj5.enc}{/us
+r/share/texlive/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc}{/usr/share/t
+exlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fo
+nts/enc/dvips/inconsolata/i4-t1-4.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
+dvips/libertine/lbtn_7grukw.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
+libertine/lbtn_nh77jq.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libert
+ine/lbtn_naooyc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lb
+tn_76gpa5.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_afu
+sau.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.en
+c}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_mmutss.enc}</us
+r/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/newtx/fxlri-5letters.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/newtx/fxlri-7letters.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/newtx/txex-bar.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts
+/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/newtx/zxlr.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
+Output written on sample-sigconf.pdf (4 pages, 883620 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
- 65754 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 55840 words of extra memory for PDF output out of 61914 (max. 10000000)
 
