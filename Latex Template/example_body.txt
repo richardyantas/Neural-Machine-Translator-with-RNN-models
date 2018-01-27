@@ -1,39 +1,34 @@
 \section{Introduction}
 
-This means the model does not have to explicitly
-store gigantic phrase tables and language models
-as in  the case  of standard  MT; hence,  NMT has
-a small memory footprint.   Lastly,  implementing
-NMT decoders is easy unlike the highly intricate
-decoders in standard MT.
+The \textit{proceedings} are the records of a conference.\footnote{This
+  is a footnote}  ACM seeks
+XD to give these conference by-products a uniform, high-quality
+appearance.  To do this, ACM has some rigid requirements for the
+format of the proceedings documents: there is a specified format
+(balanced double columns), a specified set of fonts (Arial or
+Helvetica and Times Roman) in certain specified sizes, a specified
+live area, centered on the page, specified size of margins, specified
+column widtsh and gutter size.
 
-\section{Neural Machine Translations}
-NMT is an approach to machine translation that uses a large neural network. It departs from phrases-based statistical approaches that use separately engineerd subcomponents.Neural machine translation (NMT) is not a drastic step beyond what has been traditionally done in statistical machine translation (SMT). MNT starts emitting one target word a time  as illustrated in. NMT is often a large neural network that is trained in an end-to-end fashion and has the abil-ity to generalize well to very long word sequences.
+\section{The Body of The Paper}
+Typically, the body of a paper is organized into a hierarchical
+structure, with numbered or unnumbered headings for sections,
+subsections, sub-subsections, and even smaller sections.  The command
+\texttt{{\char'134}section} that precedes this paragraph is part of
+such a hierarchy.\footnote{This is a footnote.} \LaTeX\ handles the
+numbering and placement of these headings for you, when you use the
+appropriate heading commands around the titles of the headings.  If
+you want a sub-subsection or smaller part to be unnumbered in your
+output, simply append an asterisk to the command name.  Examples of
+both numbered and unnumbered headings will appear throughout the
+balance of this sample document.
 
-% Introduce a new line
+Because the entire article is contained in the \textbf{document}
+environment, you can indicate the start of a new paragraph with a
+blank line in your input file; that is why this sentence forms a
+separate paragraph.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.25]{nmt}
-  \caption{Encoder-decoder architecture}   
-  \label{fig:picture}
-\end{figure}
-
-In this tutorial, we consider as examples a deep multi-layer RNN which is unidirectional and uses LSTM as a recurrent unit. We show an example of such a model in Figure 2. In this example, we build a model to translate a source sentence "I am a student" into a target sentence "Je suis étudiant". At a high level, the NMT model consists of two recurrent neural networks: the encoder RNN simply consumes the input source words without making any prediction; the decoder, on the other hand, processes the target sentence while predicting the next words.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.25]{seq2seq}
-  \caption{ Neural machine translation }   
-  \label{fig:picture}
-\end{figure}
-
-
-
-
-\section{Attention based models}
-
-\subsection{Global attention}
+\subsection{Type Changes and {\itshape Special} Characters}
 
 We have already seen several typeface changes in this sample.  You can
 indicate italicized words or phrases in your text with the command
@@ -54,15 +49,12 @@ characters you need anywhere in your document; you can find a complete
 list of what is available in the \textit{\LaTeX\ User's Guide}
 \cite{Lamport:LaTeX}.
 
-
-\subsection{Local attention}
+\subsection{Math Equations}
 You may want to display math equations in three distinct styles:
 inline, numbered or non-numbered display.  Each of
 the three are discussed in the next sections.
 
-
-
-\subsubsection{Input-feeding Approach}
+\subsubsection{Inline (In-text) Equations}
 A formula that appears in the running text is called an
 inline or in-text formula.  It is produced by the
 \textbf{math} environment, which can be
@@ -104,7 +96,7 @@ and follow it with another numbered equation:
 \end{equation}
 just to demonstrate \LaTeX's able handling of numbering.
 
-\subsection{Input-feeding approach}
+\subsection{Citations}
 Citations to articles~\cite{bowman:reasoning,
 clark:pct, braams:babel, herlihy:methodology},
 conference proceedings~\cite{clark:pct} or maybe
@@ -158,7 +150,7 @@ A couple of citations with DOIs: \cite{2004:ITE:1009386.1010128,
 Online citations: \cite{TUGInstmem, Thornburg01, CTANacmart}.  
 
 
-\subsection{bal bla}
+\subsection{Tables}
 Because tables cannot be split across pages, the best
 placement for them is typically the top of the page
 nearest their initial cite.  To
@@ -322,71 +314,6 @@ Another construct is \textbf{proof}, for example,
   which contradicts our assumption that $l\neq 0$.
 \end{proof}
 
-\section{Experiments}
-dsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsds
-dsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsds
-dsdsdsdsdsdsdsdsvdsdsdsddsdsdsdsdsdsdsdsdsdsdsds
-
-\subsection{Training Details}
-asdasdasd asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-
-\subsection{English-Spanish Results}
-asdasdasd asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-
-\subsection{Spanish-English Results}
-asdasdasd asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-
-asdasdasd asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-asdasdasd
-
-\section{Analysis}
-dsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsds
-dsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsds
-dsdsdsdsdsdsdsdsvdsdsdsddsdsdsdsdsdsdsdsdsdsdsds
-
-\subsection{Learning curves}
-
-\subsection{Effects of Translations Long Sentences}
-
-\subsection{Choices of attentional Architectures}
-
-\subsection{Alignment Quality}
-
-\subsection{Sample Translations}
-
-
-
 \section{Conclusions}
 This paragraph will end the body of this sample document.
 Remember that you might still have Acknowledgments or
@@ -400,4 +327,58 @@ examples only.
 %\end{document}  % This is where a 'short' article might terminate
 
 
-% training details
+
+\appendix
+%Appendix A
+\section{Headings in Appendices}
+The rules about hierarchical headings discussed above for
+the body of the article are different in the appendices.
+In the \textbf{appendix} environment, the command
+\textbf{section} is used to
+indicate the start of each Appendix, with alphabetic order
+designation (i.e., the first is A, the second B, etc.) and
+a title (if you include one).  So, if you need
+hierarchical structure
+\textit{within} an Appendix, start with \textbf{subsection} as the
+highest level. Here is an outline of the body of this
+document in Appendix-appropriate form:
+\subsection{Introduction}
+\subsection{The Body of the Paper}
+\subsubsection{Type Changes and  Special Characters}
+\subsubsection{Math Equations}
+\paragraph{Inline (In-text) Equations}
+\paragraph{Display Equations}
+\subsubsection{Citations}
+\subsubsection{Tables}
+\subsubsection{Figures}
+\subsubsection{Theorem-like Constructs}
+\subsubsection*{A Caveat for the \TeX\ Expert}
+\subsection{Conclusions}
+\subsection{References}
+Generated by bibtex from your \texttt{.bib} file.  Run latex,
+then bibtex, then latex twice (to resolve references)
+to create the \texttt{.bbl} file.  Insert that \texttt{.bbl}
+file into the \texttt{.tex} source file and comment out
+the command \texttt{{\char'134}thebibliography}.
+% This next section command marks the start of
+% Appendix B, and does not continue the present hierarchy
+\section{More Help for the Hardy}
+
+Of course, reading the source code is always useful.  The file
+\path{acmart.pdf} contains both the user guide and the commented
+code.
+
+\begin{acks}
+  The authors would like to thank Dr. Yuhua Li for providing the
+  MATLAB code of the \textit{BEPS} method.
+
+  The authors would also like to thank the anonymous referees for
+  their valuable comments and helpful suggestions. The work is
+  supported by the \grantsponsor{GS501100001809}{National Natural
+    Science Foundation of
+    China}{http://dx.doi.org/10.13039/501100001809} under Grant
+  No.:~\grantnum{GS501100001809}{61273304}
+  and~\grantnum[http://www.nnsf.cn/youngscientists]{GS501100001809}{Young
+    Scientists' Support Program}.
+
+\end{acks}
