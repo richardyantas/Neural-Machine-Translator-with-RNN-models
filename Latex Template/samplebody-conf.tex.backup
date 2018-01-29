@@ -142,19 +142,6 @@ The  effects  of  hav-ing  such  connections  are  two-fold:  (a)  we  hope
 to make the model fully aware of previous align-ment choices  and (b) we create a very deep net-
 work spanning both horizontally and vertically.
 
-\begin{table*}
-  \caption{Parameters on different Trained Models}
-  \label{tab:1}
-\begin{tabular}{@{}cccccccc@{}}
-\toprule
-Model\_Name & Num\_Units & Num\_Layers & Dropout & Unit\_Type & Attention\_Model & Train\_Steps & Batch \\ \midrule
-nmt1\_en-es & 128        & 2           & 0.2     & lstm       & scaled\_luong    & 12,000       & 128   \\
-nmt2\_en-es & 128        & 4           & 0.2     & lstm       & scaled\_luong    & 40,000       & 128   \\
-nmt3\_en-es & 128        & 2           & 0.2     & lstm       & scaled\_luong    & 35000        & 128   \\
-nmt4\_en-es & 128        & 3           & 0.2     & lstm       & scale\_luong     & 100,000      & 128   \\ \bottomrule
-\end{tabular}
-\end{table*}
-
 \section{Experiments}
 
 For this Section, we used the base RNN provided by Google's Library Tensorflow with a numerous changes in variables
@@ -192,6 +179,19 @@ Take into account that even with better characteristics training these types of 
 days to complete. We recommend running with tensorflow-GPU configuration and use GPU's with at least 8 Gbs of memory.\\
 
 Next, we present our different trained models and the values we used.
+
+\begin{table*}[h]
+  \caption{Parameters on different Trained Models}
+  \label{tab:1}
+\begin{tabular}{@{}cccccccc@{}}
+\toprule
+Model\_Name & Num\_Units & Num\_Layers & Dropout & Unit\_Type & Attention\_Model & Train\_Steps & Batch \\ \midrule
+nmt1\_en-es & 128        & 2           & 0.2     & lstm       & scaled\_luong    & 12,000       & 128   \\
+nmt2\_en-es & 128        & 4           & 0.2     & lstm       & scaled\_luong    & 40,000       & 128   \\
+nmt3\_en-es & 128        & 2           & 0.2     & lstm       & scaled\_luong    & 35000        & 128   \\
+nmt4\_en-es & 128        & 3           & 0.2     & lstm       & scale\_luong     & 100,000      & 128   \\ \bottomrule
+\end{tabular}
+\end{table*}
 
 \subsection{English-Spanish Results}
 
@@ -280,16 +280,18 @@ Our changes in architecture dropped a series of interesting features on the nmt 
 in this work.\\
 
 We did not mention earlier, but all of our models used the Scaled Luong Attention models. That is mainly
-because the bleu scores got almost doubled only by activating this characteristic. So we considered to use
-this addon in our tests.\\
+because the bleu scores got
 
-Traing time is related with a number a features like number of iterations, batch size, number of layers, etc.
-So, it is important to remember that in order to get the best results the Neural Model needs several hours to train.\\
+This paragraph will end the body of this sample document.
+Remember that you might still have Acknowledgments or
+Appendices; brief samples of these
+follow.  There is still the Bibliography to deal with; and
+we will make a disclaimer about that here: with the exception
+of the reference to the \LaTeX\ book, the citations in
+this paper are to articles which have nothing to
+do with the present subject and are used as
+examples only.
 
-We also conclude that NMT is a good translation model. Its potential, scability and no restriction for language
- pairs make this tecnique very attractive to do more research. Nevertheless, the present goal with the presented
- method is to accurately find the best training features with may drive in as good metrics scores as the ones gotten
- by humans.
 
 %\end{document}  % This is where a 'short' article might terminate
 

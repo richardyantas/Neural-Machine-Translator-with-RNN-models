@@ -1630,10 +1630,3 @@ pages = "24--31"}
   journal = {https://github.com/tensorflow/nmt},
   year    = {2017},
 }
-
-@article{europarl,
-  author  = {Philipp Koehn},
-  title   = {Europarl: A Parallel Corpus for Statistical Machine Translation},
-  journal = {http://www.statmt.org/europarl},
-  year    = {2005},
-}
